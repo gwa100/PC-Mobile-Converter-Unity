@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Save Converter for Clicker Heroes. Supports 1e10.">
+    <meta property="og:author" content="Legocro">
+    <meta property="og:description" content="Save Converter for Clicker Heroes. Supports 1e10.">
+    <meta property="og:image" content="https://abload.de/img/moeru5qpd8.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1000">
+    <meta property="og:site_name" content="Clicker Heroes - Save Converter">
+    <meta property="og:title" content="Convert Saves">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://legocro.github.io/Pc-and-mobile-save-converter">
+
+    <title>Pc and mobile save converter</title>
+    <link rel="icon" href="https://abload.de/img/moeru5qpd8.png" type="image/png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104772074-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-104772074-3');
+    </script>
+
+
+
+    <link id="style" rel="stylesheet" href="https://bootswatch.com/3/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/nodeca/pako/7abdb13e/dist/pako.min.js"></script>
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <button class="hidden" data-toggle="modal" data-target="#warningModal" id="warning"></button>
+    <div class="modal fade" id="warningModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header warning">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Note</h4>
+                </div>
+                <div class="modal-body">
+                    <p>I was supposed to add a warning here, but, I can't be bothered, so enjoy looking at it here. /shrug</p>
+                </div>
+                <div class="modal-footer warning">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <h1 class="row text-center">Save converter</h1>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Input
+                    </div>
+                    <div class="panel-body form-group">
+                        <textarea class="form-control" rows="20" id="input" onfocus="this.select()"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        Output
+                    </div>
+                    <div class="panel-body form-group">
+                        <textarea class="form-control" rows="20" id="output" readonly onfocus="this.select()"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <input id="inLabel" type="text" class="form-control text-uppercase" readonly style="resize: none;">
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <input id="outLabel" type="text" class="form-control text-uppercase text-right" readonly style="resize: none;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
