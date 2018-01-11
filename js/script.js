@@ -28,14 +28,14 @@ function convert(text) {
 const converter = {
     "pc": function (object) {
         let temp3 = object;
-        temp3.rubies = Math.round(object.rubies / 10);
+        temp3.rubies = Math.round(object.rubies * 10);
         temp3.saveOrigin = "mobile";
         temp3.readPatchNumber = "2.5.0";
         return temp3;
     },
     "mobile": function (object) {
         let temp4 = object;
-        temp4.rubies = Math.round(object.rubies * 10);
+        temp4.rubies = Math.round(object.rubies / 10);
         temp4.saveOrigin = "pc";
         temp4.readPatchNumber = "1.0e10";
         return temp4;
