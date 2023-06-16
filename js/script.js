@@ -44,7 +44,7 @@ const converter = {
 
 function encode(data) {
     console.log("Encoded(n): ", data);
-    let hash = "7a990d405d2c6fb93aa8fbb0ec1a3b23";
+    let hash = "7e8bb5a89f2842ac4af01b3b7e228592";
     data = JSON.stringify(data);
     let encodedData = pako.deflate(data, { to: 'string' });
     return hash + btoa(encodedData);
